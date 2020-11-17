@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">HowIMetYourMother</string>
+    <string name="app_name">How I Met Your Mother</string>
+    <string-array name="actorsNames">
+        <item>Marshall Eriksen</item>
+        <item>Ted Mosby</item>
+        <item>Barney Stinson</item>
+    </string-array>
+    <string-array name="actorsRealNames">
+        <item>Jason Jordan Segel</item>
+        <item>Joshua Thomas Radnor</item>
+        <item>Neil Patrick Harris</item>
+    </string-array>
+    <string-array name="actorsImages">
+        <item>This is random image</item>
+        <item>This is random image</item>
+        <item>This is random image</item>
+    </string-array>
+    <string-array name="actressesNames">
+        <item>Lily Aldrin</item>
+        <item>Robin Scherbatsky</item>
+        <item>Tracy McConnell</item>
+    </string-array>
+    <string-array name="actressesRealNames">
+        <item>Alyson Hannigan</item>
+        <item>Cobie Smulders</item>
+        <item>Cristin Milioti</item>
+    </string-array>
+    <string-array name="actressesImages">
+        <item>This is random image</item>
+        <item>This is random image</item>
+        <item>This is random image</item>
+    </string-array>
 </resources>

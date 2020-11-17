@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button actorButton;
+    private Button actressesButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,14 +22,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent actorsIntent = new Intent(v.getContext(), ActorsActivity.class);
                 startActivity(actorsIntent);
-                //openActorsActivity();
             }
         });
-    }
 
-    public void openActorsActivity(){
-        Intent actorsIntent = new Intent(this.getApplicationContext(), ActorsActivity.class);
-        startActivity(actorsIntent);
+        actressesButton = (Button)findViewById(R.id.actressButton);
+        actressesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent actorsIntent = new Intent(v.getContext(), ActressesActivity.class);
+                startActivity(actorsIntent);
+            }
+        });
     }
 
 
