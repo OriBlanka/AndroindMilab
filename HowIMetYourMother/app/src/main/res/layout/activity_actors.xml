@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ActorsActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/actorsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="169dp">
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
