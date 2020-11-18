@@ -1,0 +1,18 @@
+com/HowIMetYourMother/app/BuildConfig.java
+ com.HowIMetYourMother.app.BuildConfig
+com/HowIMetYourMother/app/ActorsAdapter.java
+ com.HowIMetYourMother.app.ActorsAdapter
+ com.HowIMetYourMother.app.ActorsAdapter$MyViewHolder
+com/HowIMetYourMother/app/ActressesAdapter.java
+ com.HowIMetYourMother.app.ActressesAdapter
+ com.HowIMetYourMother.app.ActressesAdapter$MyViewHolder
+com/HowIMetYourMother/app/MainActivity.java
+ com.HowIMetYourMother.app.MainActivity
+ com.HowIMetYourMother.app.MainActivity$1
+ com.HowIMetYourMother.app.MainActivity$2
+com/HowIMetYourMother/app/ActressesActivity.java
+ com.HowIMetYourMother.app.ActressesActivity
+ com.HowIMetYourMother.app.ActressesActivity$1
+com/HowIMetYourMother/app/ActorsActivity.java
+ com.HowIMetYourMother.app.ActorsActivity
+ com.HowIMetYourMother.app.ActorsActivity$1
