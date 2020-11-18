@@ -27,8 +27,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#7DA9FF" />
-<<<<<<< HEAD
-
-=======
->>>>>>> 36a6cf14356bfd44fe3c521158ed6324bc630d00
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
