@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuotesApplication">
+        <receiver
+            android:name=".QuotesReciver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <service
+            android:name=".QuotesIntentService"
+            android:exported="false" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

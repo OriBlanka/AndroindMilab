@@ -29,23 +29,23 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/quotesButton"
-            android:layout_width="159dp"
+            android:id="@+id/quotesButtonNow"
+            android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:layout_gravity="center"
             android:backgroundTint="#000066"
-            android:text="Show Quotes"
+            android:text="Show Quote Now"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/stoQuotesButton"
-            android:layout_width="159dp"
+            android:id="@+id/timingQuotesButton"
+            android:layout_width="171dp"
             android:layout_height="58dp"
             android:layout_gravity="center"
             android:backgroundTint="#000066"
-            android:text="Stop Quotes"
+            android:text="Show Quote every 5 minutes"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />
