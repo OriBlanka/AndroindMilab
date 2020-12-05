@@ -34,10 +34,7 @@
             android:layout_height="58dp"
             android:layout_gravity="center"
             android:backgroundTint="#000066"
-            android:text="Show Quote Now"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:text="Show Quote Now" />
 
         <Button
             android:id="@+id/timingQuotesButton"
@@ -45,10 +42,8 @@
             android:layout_height="58dp"
             android:layout_gravity="center"
             android:backgroundTint="#000066"
-            android:text="Show Quote every 5 minutes"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:text="Show Quote every 5 minutes"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
