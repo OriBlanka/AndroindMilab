@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "stock-quotes-85d2e",
+  "private_key_id": "3e684f8e107512b4bc094eacab9597e375882b5a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDlSUQidqaRO9QV\ntMYxYtWNxlud/I7KwG7nVcVGYhkkHfm9NINwpVnra5/SF2l/98OjC0+vCqmE5XkV\nsNsB7XKU1Jf/Gk6DGAPgP+VHyBjZTK/Y4kYTakah5ipAvlvdHNqFmOOMAncOKHo1\nyOmObSdyma2ZHF7MywkDUj+RTNeZa67Pv0oIHN4yMSJb8FnNmVXmQKoKjll1FqCb\nK2SaVkJBuDT11EgsAfWxxKDREtzQn8GS3AF6RNYuepsdaGT01EbcCPFSv0dwEmOc\nCekSGXXowixIoUbBvCJF2928Dk5LECNeNdVk2aK5PaDIuvGbd4n85u9rCHKzGdbx\nhdyH7G/FAgMBAAECggEAbaKH4tbLNLzf33UuI6U3qfAEFNoTyR0UqqcXil0T2nI+\n3VrD0tQt1+UBaarqNldZg5fABVnazwIO0PFc92H7nPC+sSt6CTMtf0fuMVGbmCQU\nHWeszFHP7lApOgYL1QGb96+wdl0jYnC2ZwtnqkPFTgXvvTuUlOYsrBri7G5K1T+B\nN/ErGCOsGcl/ZYSDmhsn4gmg6tQUoEXDHEZRbSO5I2noMl8uMHjBy2y1kkJLSGK0\nI62eew87f8ApTWUmokwonPXw3KI5ARjMmPyvY7nCMm0FTWPNSrTJiKqmvd0nQrcE\nutt1F/l/vTV4mRXoVWZbH8nJ0Gqd3cqwPE0VsNFpTQKBgQD/OFXidXIl4oP5ng0u\njZugqpM2Gdr39hyyC+NfsVsZEEuZaaMyvGeOemWuXgaPyOYVNJCpAvRfgjxyb3yZ\n4NGExEzPklethr3fp/KO8MSFEqfypbFjCKw+pcxFAeSp4J1RtvLk3wGFFIye1N4c\nnsnIgCjTguXTGCEE0+zMn7+WswKBgQDl/KRaiELapJMZBAuyFi7J9xFlXNALBYM6\nvNqm0BaRBfBdVAqV6qxl29SLJj/91PQWXpcjfbaTIGE2duwDe7Rws5Et6TFvD6Mr\n6kcS5BPXMQhcd4IppcgvhagIFheYaHgiLcIzXDNeZS6SGDYxKpnE/7Z9hxjobDsp\nv1BbFuLbpwKBgG49UzuiJ1Ad64uirWbyW8qmYzf3KxH4CKUPZYMsBIFq/HyjmI6N\nut1cGRecHZF14Yw/TEz0rcGja6Cyb0u4REfo0pTGTYDytoko7ii37urcCBdTYq+4\nS040J2uXScHm940YTQp3GRz2p1bj85zBKb+lO/1AiS0JOxnuwFYSmprpAoGAf9Fs\namBGf4ttsT59XYlUkax9f48YlLeImnFxN7p4gDsDvmrBw1X8YFPPiVJFyEW9Ll19\ntBzfBl+9h26KdtkejHBP5GswrR/MuNBolcgqerNmiTVmIs1fN4IZw/y7Oln9Qkma\nH79DUVf8jPdlzud1NHZFrvgRUMMuEmKgPy+1/wsCgYEA/KNTqzOI8ja2Qje0nMYW\nVmdstRyJcHlniJJGFsywRa8R/jfSs3BHUcbquDjUPmYn6FyqOQFl65xT8mSl4TOj\nrRdeVWiKK4zS+kF5jdiEQH4Kn3j1L+HWJKQ4IWfxt5SYLNq7EQVdzvatFNjgwyHu\nEVkW48jvvLZnZj/BZeIYvNI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-qmz5m@stock-quotes-85d2e.iam.gserviceaccount.com",
+  "client_id": "105301509814547896192",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qmz5m%40stock-quotes-85d2e.iam.gserviceaccount.com"
+}
