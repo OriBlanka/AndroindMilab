@@ -46,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="cursive"
                 android:hint="Write a stock name please"
-                android:onClick="fetchStockPrice"
                 android:textSize="15dp" />
 
             <Space
@@ -62,24 +61,9 @@
                 android:layout_weight="1"
                 android:backgroundTint="#08214a"
                 android:fontFamily="cursive"
-                android:onClick="fetchStockPrice"
                 android:text="Submit"
                 android:textColor="#8cb8ff"
                 android:textSize="25dp" />
-
-            <TextView
-                android:id="@+id/stockNameText"
-                android:layout_width="143dp"
-                android:layout_height="6dp"
-                android:layout_weight="1"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/stockPriceText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
 
             <Space
                 android:layout_width="match_parent"

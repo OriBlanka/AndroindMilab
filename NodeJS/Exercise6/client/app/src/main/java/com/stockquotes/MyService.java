@@ -6,6 +6,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
 import com.android.volley.Request;
@@ -24,7 +26,6 @@ public class MyService extends FirebaseMessagingService  {
 
     private static final String TAG = "MyFirebaseMsgService";
     private static final String SERVER_ADDRESS = "http://10.0.0.38:8080";
-    private static final String USERNAME = "username";
 
     static String CHANNEL_ID = "CHANNEL";
     static int notifyId = 1;
@@ -47,6 +48,7 @@ public class MyService extends FirebaseMessagingService  {
     @Override
     public void onNewToken(String token) {
         Log.d(TAG, "Refreshed token: " + token);
+        super.onNewToken(token);
         sendRegistrationToServer(token);
     }
 
@@ -57,13 +59,8 @@ public class MyService extends FirebaseMessagingService  {
     ***********************************************************************/
     private void sendRegistrationToServer(String token) {
         JSONObject requestObject = new JSONObject();
-        try {
-            requestObject.put("token", token);
-        }
-        catch (JSONException e) {}
-
-        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, SERVER_ADDRESS + USERNAME + "/token", requestObject,
-            new Response.Listener<JSONObject>() {
+        JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, SERVER_ADDRESS + "token/" + token,
+                requestObject, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     Log.i(TAG, "Token saved successfully");
@@ -75,8 +72,7 @@ public class MyService extends FirebaseMessagingService  {
                     Log.e(TAG, "Failed to save token - " + error);
                 }
             });
-
-        _queue.add(req);
+        FetcherRequestQueue.getInstance(this).getQueue().add(req);
     }
 
     /**********************************************************************
@@ -94,17 +90,14 @@ public class MyService extends FirebaseMessagingService  {
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                @Override
+                public void run() {
+                    //Push notification with the information that sent from firebase
+                    sendNotification(remoteMessage.getNotification().getBody());
+                }
+            });
         }
-
-        Intent intent = new Intent();
-        //write the relevant values into intent object
-        intent.putExtra("symbol", remoteMessage.getData().get("symbol"));
-        intent.putExtra("price", remoteMessage.getData().get("price"));
-        intent.setAction("com.stockquotes.onMessageReceived");
-        sendBroadcast(intent);
-
-        //Push notification with the information that sent from firebase
-        sendNotification(remoteMessage.getNotification().getBody());
     }
 
     /**********************************************************************

@@ -1,81 +1,82 @@
+"use strict";
+
 const express = require('express');
+const bodyParser = require('body-parser');
+const FCM = require('fcm-push');
+const fetch = require("node-fetch");
+
 let app = express();
-const request = require('request');
-const admin = require("firebase-admin");
+app.use(bodyParser.json());
 
 const apiKey = "6A28OH5H6W92YMY8";
+const fcmKey = "BHSiE8AvO2eeErUiyizj63rStQEc-1cc2kLXoNSqWuQ5TjyUzzOmEsWxKK9fJXqUtn_xq9l3FX4rElS1IlDvqzg";
 let token = "";
+let fcm = new FCM(fcmKey);
 
-const serviceAccount = require('D:/Ori-Studies/miLab/mobile/NodeJS/Exercise6/server/stock-quotes-85d2e-3e684f8e1075.json');
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://stock-quotes-85d2e-default-rtdb.firebaseio.com"
+app.post('/token/:token', (req, res) => {
+    token = req.params.token;
+    console.log("Got new token: " + token);
+    res.json({result: "success"});
 });
 
 
-app.get('/stocks', (req, res, next) => {
-    console.log('getting request');
+app.get('/stocks/:stock', (req, res) => {
     let stockName = req.body.stock;
     token = req.body.token;
+    console.log (`Got the token: ${token}, and the stock: ${stockName}`);
 
-    console.log (`Goe the token: ${token}, and the stock: ${stockName}`);
-
-    var url = `https://www.alphavantage.co/query?function=Global_Quote&symbol=${stockName}&interval=1min&outputsize=full&apikey=${apiKey}`;
-    request(url, function(err, res, body){
-        console.log(body);
-    })
-
-    var firstTime = 1;
-    //var tempPrice = 0;
-    var price = 0;
-
-    function timeout () {
-        setTimeout(function() {
-            firstTime = 0;
-            request(url, function(err, response, body) {
-                if (err) { //Something went wrong went trying to connect to AlphaVantage
-                    console.log('error:', error);
-                    response.status(400).json({err:"Failed sending request to AlphaVantage"});
-                } else {
-                    let stockInformation = JSON.parse(body);
-                    let globalQuote = stockInformation["Global Quote"];
-                    if (globalQuote != undefined) { //A valid value was obtained
-                        price = globalQuote["05. price"];
-                    }    
-                    console.log(`The current price of ${stockName} stock is: ${updatePrice}`);
-
-                    sendToFCM(registrationToken, stockName, price);
-                }
-            })
-            timeout();
-        }, firstTime ? 1 : 15000)
-    }
-    timeout();
+    setInterval(() => {
+        fetchData(stockName, (price, error) => {
+            if(!error){
+                sendToFCM(token, stockName, price);
+            } else {
+                console.log("Error sending message:", error);
+            }
+        })
+    }, 15000);
+    res.json({result: "Success!"});
 });
 
 app.listen(8080,() => {
     console.log('Listening on port 8080!')});
 
     
+    
+/**********************************************************************
+    Fetches the stock data from the Alphavantage API related to the 
+    given symbol     
+***********************************************************************/
+function fetchData (symbol, cb) {
+    //parse URL
+    //let url = `https://www.alphavantage.co/query?function=Global_Quote&symbol=${stockName}&interval=1min&outputsize=full&apikey=${apiKey}`;
+    let url = new URL('https://www.alphavantage.co/query');
+    let params = {function: "GLOBAL_QUOTE", symbol: symbol, apikey: apiKey};
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+    // fetch data and execute callback
+    fetch(url , {method: 'GET'})
+    .then(response => response.json())
+    .then((data) => {
+        cb(data["Global Quote"]["05. price"]);
+    })
+    .catch((error) => {
+        console.error('ERROR: ', error);
+        cb("", error);
+    });
+}
+
 /**********************************************************************
     Taken the stock's name and price and send them to the FCM     
 ***********************************************************************/
 function sendToFCM(token, stock, price) {
-    var payload = {
-        data: {
-            symbol: stock,
-            price: price
-        },
+    fcm.send({
+        to: token,
+        data: {},
         notification: {
+            title: `Updating  ${stock}`,
             body: `The price of ${stock} is ${price}`
         }
-    };
-    admin.messaging().sendToDevice(token, payload)
-        .then(function(response) {
-            console.log("Successfully sent message:", response);
-        })
-        .catch(function(error) {
-            console.log("Error sending message:", error);
-        });
+    }, (error, response) => {
+        console.log("Error sending message:", error);
+    });
 }
