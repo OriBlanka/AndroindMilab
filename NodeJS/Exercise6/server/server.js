@@ -9,29 +9,31 @@ let app = express();
 app.use(bodyParser.json());
 
 const apiKey = "6A28OH5H6W92YMY8";
-const fcmKey = "BHSiE8AvO2eeErUiyizj63rStQEc-1cc2kLXoNSqWuQ5TjyUzzOmEsWxKK9fJXqUtn_xq9l3FX4rElS1IlDvqzg";
+const fcmKey = "AAAAFl4dOQA:APA91bFUtMvcBx7sj9TxAm0xROyAq9l1ODvIDzpYZOebG3oUKcPmmiw7-8GmdgZgMRKUIjTmoJUbNHetgTlL8f0TAIGvcr-QY3Sru2Nqe5AJ7UDbyDwBSJIC3FcfQN89IW4POQmrEFF9";
+
 let token = "";
 let fcm = new FCM(fcmKey);
 
 
 app.post('/token/:token', (req, res) => {
-    token = req.params.token;
+    token = req.params['token'];
     console.log("Got new token: " + token);
     res.json({result: "success"});
 });
 
 
-app.get('/stocks/:stock', (req, res) => {
-    let stockName = req.body.stock;
+app.post('/stocks/:stock', (req, res) => {
+    let stockName = req.params['stock'];
     token = req.body.token;
     console.log (`Got the token: ${token}, and the stock: ${stockName}`);
 
     setInterval(() => {
         fetchData(stockName, (price, error) => {
-            if(!error){
-                sendToFCM(token, stockName, price);
-            } else {
+            if(error){
                 console.log("Error sending message:", error);
+            } else {
+                sendToFCM(token, stockName, price);
+                //console.log("Success!")
             }
         })
     }, 15000);
@@ -48,15 +50,15 @@ app.listen(8080,() => {
     given symbol     
 ***********************************************************************/
 function fetchData (symbol, cb) {
-    //parse URL
-    //let url = `https://www.alphavantage.co/query?function=Global_Quote&symbol=${stockName}&interval=1min&outputsize=full&apikey=${apiKey}`;
+    //build url address
     let url = new URL('https://www.alphavantage.co/query');
     let params = {function: "GLOBAL_QUOTE", symbol: symbol, apikey: apiKey};
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
-    // fetch data and execute callback
+    // fetch data
     fetch(url , {method: 'GET'})
     .then(response => response.json())
     .then((data) => {
+        //console.log(data);
         cb(data["Global Quote"]["05. price"]);
     })
     .catch((error) => {
@@ -71,7 +73,10 @@ function fetchData (symbol, cb) {
 function sendToFCM(token, stock, price) {
     fcm.send({
         to: token,
-        data: {},
+        data: {
+            symbol: stock,
+            price: price
+        },
         notification: {
             title: `Updating  ${stock}`,
             body: `The price of ${stock} is ${price}`

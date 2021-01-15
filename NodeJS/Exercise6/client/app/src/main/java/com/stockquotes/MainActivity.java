@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.installations.FirebaseInstallations;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,8 +32,7 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
-    private static final String SERVER_ADDRESS = "http://10.0.0.38:8080";
-    static String token = "";
+    private static final String SERVER_ADDRESS = "http://10.0.0.21:8080/";
 
     TextInputEditText stockName;
     Button submitButton;
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         file) and connect to the server in order to fetch the stock
         price
     ***********************************************************************/
-    public void fetchStockPrice (String stockName, String tocken) {
+    public void fetchStockPrice (String stockName, String token) {
         JSONObject reqObject = new JSONObject();
         try {
             reqObject.put("token", token);
@@ -91,5 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 fetchStockPrice(stockName, token);
             }
         });
+        FirebaseInstallations.getInstance();
     }
 }
