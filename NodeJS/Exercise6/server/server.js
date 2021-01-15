@@ -33,7 +33,6 @@ app.post('/stocks/:stock', (req, res) => {
                 console.log("Error sending message:", error);
             } else {
                 sendToFCM(token, stockName, price);
-                //console.log("Success!")
             }
         })
     }, 15000);
@@ -58,7 +57,6 @@ function fetchData (symbol, cb) {
     fetch(url , {method: 'GET'})
     .then(response => response.json())
     .then((data) => {
-        //console.log(data);
         cb(data["Global Quote"]["05. price"]);
     })
     .catch((error) => {

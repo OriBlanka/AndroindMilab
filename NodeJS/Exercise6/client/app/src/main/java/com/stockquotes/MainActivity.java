@@ -91,6 +91,5 @@ public class MainActivity extends AppCompatActivity {
                 fetchStockPrice(stockName, token);
             }
         });
-        FirebaseInstallations.getInstance();
     }
 }
