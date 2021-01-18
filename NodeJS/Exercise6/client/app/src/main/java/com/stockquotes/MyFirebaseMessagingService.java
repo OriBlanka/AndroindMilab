@@ -43,10 +43,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     /**********************************************************************
-     Called if InstanceID token is updated. This may occur if the
-     security of the previous token had been compromised. Note that
-     this is called when the InstanceID token is initially generated
-     so this is where you would retrieve the token.
+         Called if InstanceID token is updated. This may occur if the
+         security of the previous token had been compromised. Note that
+         this is called when the InstanceID token is initially generated
+         so this is where you would retrieve the token.
      ***********************************************************************/
     @Override
     public void onNewToken(@NonNull String token) {
@@ -56,9 +56,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     /**********************************************************************
-     Persist token to third-party servers.
-     Modify this method to associate the user's FCM InstanceID token
-     with any server-side account maintained by your application.
+         Persist token to third-party servers.
+         Modify this method to associate the user's FCM InstanceID token
+         with any server-side account maintained by your application.
      ***********************************************************************/
     private void sendRegistrationToServer(String token) {
         JSONObject requestObject = new JSONObject();
@@ -79,7 +79,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     /**********************************************************************
-     Called when message is received.
+        Called when message is received.
      ***********************************************************************/
     @Override
     public void onMessageReceived(final RemoteMessage remoteMessage) {

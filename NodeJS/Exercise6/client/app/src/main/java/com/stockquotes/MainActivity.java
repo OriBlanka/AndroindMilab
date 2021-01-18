@@ -58,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**********************************************************************
-        Call when clicking on the submitButton (connect then on the xml
-        file) and connect to the server in order to fetch the stock
-        price
+        Call when clicking on the submitButton and connect to the server
+        in order to fetch the stock price
     ***********************************************************************/
     public void fetchStockPrice (String stockName, String token) {
         JSONObject reqObject = new JSONObject();
