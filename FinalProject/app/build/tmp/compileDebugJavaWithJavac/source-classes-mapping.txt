@@ -1,0 +1,4 @@
+com/runbuddy/MainActivity.java
+ com.runbuddy.MainActivity
+com/runbuddy/BuildConfig.java
+ com.runbuddy.BuildConfig
