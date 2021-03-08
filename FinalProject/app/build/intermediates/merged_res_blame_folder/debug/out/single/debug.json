@@ -4,12 +4,64 @@
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_show_activities.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\fragment_show_activities.xml"
+    },
+    {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_find_friends_for_run.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\activity_find_friends_for_run.xml"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_maps.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\fragment_maps.xml"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_start_activity.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\fragment_start_activity.xml"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\font_actor.ttf.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\font\\actor.ttf"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_page.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\activity_home_page.xml"
+    },
+    {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_test.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\activity_test.xml"
     },
     {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_background.png.flat",
@@ -18,6 +70,10 @@
     {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_row_activity.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\list_row_activity.xml"
     },
     {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -32,28 +88,16 @@
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_row_group.xml.flat",
+        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\list_row_group.xml"
     },
     {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\Ori-Studies\\miLab\\mobile\\FinalProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
